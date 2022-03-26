@@ -19,6 +19,7 @@
   "homepage": "https://github.com/WesleyB003/social-network-API#readme",
   "dependencies": {
     "express": "^4.17.3",
+    "moment": "^2.29.1",
     "mongodb": "^4.4.1",
     "mongoose": "^6.2.8",
     "node": "^17.7.1"
