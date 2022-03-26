@@ -13,13 +13,13 @@ const ThoughtModelSchema = new Schema(
     createdAt: {
       type: Date,
       default: Date.now,
+      // Looked to momentjs.com for help formating date
       get: createdAtVal => moment(createdAtVal).format('MMM DD, YYYY [at] hh:mm a')
     },
     username: {
       type: String,
       required: true
     },
-    // use reactionsSchema to validate data for a reply
     reactions: [reactionSchema]
 },
 {
