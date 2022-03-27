@@ -51,7 +51,7 @@ const thoughtController = {
             .catch(err => res.json(err));
     },
 
-    deleteThought({ params }, res) {
+    removeThought({ params }, res) {
         Thought.findByIdAndDelete({ _id: params.thoughtId }, { runValidators: true, new: true })
             .then(thoughtData => {
                 if (!thoughtData) {
