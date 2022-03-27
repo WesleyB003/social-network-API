@@ -11,7 +11,7 @@ app.use(express.static('public'));
 app.use(require('./routes'));
 
 // I was having an issue with my Mongodb, when I was looking on their website (mongodb.com) I found this little solution.
-// I changed localhost to 127.0.0.1
+// I changed localhost to 127.0.0.1 below
 //https://www.mongodb.com/community/forums/t/econnrefused-27017/131911
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/social-network-API', {
   useNewUrlParser: true,
