@@ -62,7 +62,7 @@ const userControllers = {
         .catch(err => res.status(400).json(err));
     },
 
-    deletefromFriendList({params}, res) {
+    deleteFromFriendList({params}, res) {
         User.findOneAndDelete({
                 _id: params.thoghtId
             })

@@ -1,6 +1,6 @@
 const { Thought, User } = require('../models');
 
-const thoughtController = {
+const thoughtControllers = {
 
     getAllThoughts(req, res) {
         Thought.find({})
@@ -11,7 +11,7 @@ const thoughtController = {
             });
     },
 
-    getThoughtByID({ params }, res) {
+    getThoughtById({ params }, res) {
         Thought.findOne({ _id: params.thoughtId })
             .then(thoughtData => res.json(thoughtData))
             .catch(err => {
@@ -97,4 +97,4 @@ const thoughtController = {
 }
 
 
-module.exports = thoughtController;
+module.exports = thoughtControllers;
